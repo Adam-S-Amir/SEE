@@ -34,36 +34,45 @@
         padding: 0;
         width: auto;
         height: 100vh;
-        background: linear-gradient(217deg, #449dd1, rgba(255, 0, 0, 0) 70.71%),
-            linear-gradient(127deg, #00ffff, rgba(0, 255, 0, 0) 70.71%),
-            linear-gradient(336deg, #0000ff, rgba(0, 0, 255, 0) 70.71%);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        --sb-track-color: #bfbbbb;
-        --sb-thumb-color: #888a89;
-        --sb-size: 10px;
+        background: linear-gradient(217deg, #0000ff, #00ffff, #449dd1, #0000ff);
+        background-size: 500% 500%;
+        animation: gradientAnimation 10s ease infinite;
+        -webkit-animation: gradientAnimation 10s ease infinite;
+}
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
-    body::-webkit-scrollbar {
-        width: var(--sb-size);
+    ::-webkit-scrollbar {
+        width: 10px;
     }
 
-    body::-webkit-scrollbar-track {
-        background: var(--sb-track-color);
+    ::-webkit-scrollbar-track {
+        background: #bfbbbb;
     }
 
-    body::-webkit-scrollbar-thumb {
-        background: var(--sb-thumb-color);
+    ::-webkit-scrollbar-thumb {
+        background: #888a89;
     }
 
-    body::-webkit-scrollbar-thumb:hover {
+    ::-webkit-scrollbar-thumb:hover {
         background-color: rgba(71, 71, 71, 0.9);
     }
 
     @supports not selector(::-webkit-scrollbar) {
         body {
-            scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+            scrollbar-color: #888a89 #bfbbbb;
         }
     }
 }

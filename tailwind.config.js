@@ -8,6 +8,7 @@ module.exports = {
         Folly: '#FF3562',
         Turquoise: '#188C7C',
         SlateGrey: '#828F9B',
+        Cream: '#DBDACE'
       },
       fontFamily: {
         Lexend: ['Lexend', 'sans-serif'],
