@@ -1,25 +1,36 @@
 <template>
-  <nav class="bg-Turquoise py-4 rounded-lg">
-    <div class="mx-auto">
-      <ul class="flex justify-center space-x-4">
-        <li><a href="#" class="text-black font-bungee">Home</a></li>
-        <li><a href="#" class="text-black">About</a></li>
-        <li><a href="#" class="text-black">Services</a></li>
-        <li><a href="#" class="text-black">Contact</a></li>
-      </ul>
+  <nav class="fixed top-0 left-0 right-0 flex items-center justify-between p-4 bg-white shadow-md z-50">
+    <div class="flex items-center space-x-4">
+      <img src="@/assets/Img/S-BlueCopy.png" alt="Company Logo" class="h-12 w-auto" />
+      <span class="text-xl">S.E.E.</span>
     </div>
+    <ul class="flex space-x-6">
+      <li><a @click="scrollToTop" class="hover:text-gray-300">Home</a></li>
+      <li><a href="#about" class="hover:text-gray-300">About</a></li>
+      <li><a href="#" class="hover:text-gray-300">Services</a></li>
+      <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+    </ul>
   </nav>
 </template>
 
 <script>
 export default {
   name: "NavbarComponent",
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
 };
 </script>
 
 <style scoped>
-nav {
-  width: 70%;
-  transform: translate(20%, 0%);
-}
+
+/* nav {
+  position: fixed;
+} */
+
 </style>

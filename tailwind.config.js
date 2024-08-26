@@ -10,7 +10,9 @@ module.exports = {
         SlateGrey: '#828F9B',
       },
       fontFamily: {
-        bungee: ['Bungee']
+        Lexend: ['Lexend', 'sans-serif'],
+        Dangrek: ['Dangrek', 'sans-serif'],
+        Bungee: ['Bungee', 'sans-serif']
       }
     },
   },
