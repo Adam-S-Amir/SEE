@@ -1,10 +1,13 @@
 <template>
   <NavbarComponent />
   <div class="div-welcome" id="home">
-    <h1 class="text-6xl">Welcome to<br />Safi Exodus Enterprises</h1>
-    <h1 class="text-xl">
-      Expertise in App Development, Website Solutions, and Tech Repair
-    </h1>
+    <div class="flex flex-col items-center text-center space-y-4">
+      <img src="@/assets/Img/S-BlueCopy.png" class="h-auto w-auto" />
+      <h1 class="text-6xl">Welcome to<br />Safi Exodus Enterprises</h1>
+      <h1 class="text-xl">
+        Expertise in App Development, Website Solutions, and Tech Repair
+      </h1>
+    </div>
   </div>
   <section id="about">
     <div class="h-screen flex flex-col justify-center items-center">
@@ -38,7 +41,50 @@
       </div>
     </div>
   </section>
-  <section id="services"></section>
+  <section id="services">
+    <div class="flex flex-col items-center text-center space-y-8 py-10">
+      <p class="max-w-lg">
+        At Safi Exodus Enterprises, we pride ourselves on delivering high-quality
+        solutions tailored to your specific needs. Our fields of specialization include:
+      </p>
+      <div class="flex justify-center space-x-8">
+        <div>
+          <h2 class="text-xl font-bold">App Development</h2>
+          <ol class="list-decimal list-inside space-y-2 text-left">
+            <li>Custom mobile applications</li>
+            <li>Cross-platform app development</li>
+            <li>Personalized user interface design</li>
+            <li>Responsive application design and development</li>
+          </ol>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold">Website Solutions</h2>
+          <ol class="list-decimal list-inside space-y-2 text-left">
+            <li>E-commerce platforms</li>
+            <li>Remote website monitoring</li>
+            <li>Website optimization</li>
+            <li>Responsive website design and development</li>
+          </ol>
+        </div>
+        <div>
+          <h2 class="text-xl font-bold">Tech Repair</h2>
+          <ol class="list-decimal list-inside space-y-2 text-left">
+            <li>Hardware diagnostics and repair</li>
+            <li>Software troubleshooting and updates</li>
+            <li>Device setup and configuration</li>
+            <li>Hardware cleaning</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="flex flex-col items-center text-center space-y-8 py-10">
+      <p class="max-w-xlg">
+        If you'd like to schedule a free device consultation, use the link below
+      </p>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -57,6 +103,6 @@ export default {
   height: 100vh;
   display: block;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 150px;
 }
 </style>

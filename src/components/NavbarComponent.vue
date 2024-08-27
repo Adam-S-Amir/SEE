@@ -13,9 +13,30 @@
     </div>
     <ul class="flex space-x-6">
       <li><a @click="scrollToTop" class="hover:text-gray-300">Home</a></li>
-      <li><a href="#about" class="hover:text-gray-300">About</a></li>
-      <li><a href="#services" class="hover:text-gray-300">Services</a></li>
-      <li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+      <li>
+        <a
+          href="#about"
+          @click.prevent="scrollToSection('about')"
+          class="hover:text-gray-300"
+          >About</a
+        >
+      </li>
+      <li>
+        <a
+          href="#services"
+          @click.prevent="scrollToSection('services')"
+          class="hover:text-gray-300"
+          >Services</a
+        >
+      </li>
+      <li>
+        <a
+          href="#contact"
+          @click.prevent="scrollToSection('contact')"
+          class="hover:text-gray-300"
+          >Contact</a
+        >
+      </li>
     </ul>
   </nav>
 </template>
@@ -29,6 +50,12 @@ export default {
         top: 0,
         behavior: "smooth",
       });
+    },
+    scrollToSection(section) {
+      const element = document.getElementById(section);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     },
   },
 };
